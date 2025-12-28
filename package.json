@@ -1,0 +1,17 @@
+{
+  "name": "rtqcc-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "api",
+    "worker",
+    "lib"
+  ],
+  "scripts": {
+    "dev": "docker-compose up --build",
+    "prisma:generate": "pnpm -w --filter api prisma:generate && pnpm -w --filter worker prisma:generate"
+  },
+  "devDependencies": {
+    "pnpm": "^8.0.0"
+  }
+}
